@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug HftSimulator",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/HftSimulator",
+            "cwd": "${workspaceFolder}",
+            "MIMode": "lldb"
+        },
+        {
+            "name": "Debug HftSimulatorTests",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/HftSimulatorTests",
+            "args": ["--gtest_filter=*"],
+            "cwd": "${workspaceFolder}",
+            "MIMode": "lldb"
+        }
+    ]
+}
