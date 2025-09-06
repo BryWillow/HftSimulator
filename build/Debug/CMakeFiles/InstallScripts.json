@@ -1,0 +1,10 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/bryancamp/SoftwareDevelopment/cpp/professional/HftSimulator/build/Debug/cmake_install.cmake",
+		"/Users/bryancamp/SoftwareDevelopment/cpp/professional/HftSimulator/build/Debug/external/googletest/cmake_install.cmake",
+		"/Users/bryancamp/SoftwareDevelopment/cpp/professional/HftSimulator/build/Debug/external/googletest/googlemock/cmake_install.cmake",
+		"/Users/bryancamp/SoftwareDevelopment/cpp/professional/HftSimulator/build/Debug/external/googletest/googletest/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

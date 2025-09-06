@@ -6,6 +6,8 @@
 #include "spsc_ringbuffer.h"
 #include "itch_connection.h"
 #include "itch_message.h"
+#include "itch_processor.h"
+#include "itch_sender.h"
 
 int main()
 {
@@ -13,6 +15,9 @@ int main()
     // CME / BrokerTec: CME FIX/SBE (MDP 3.0) -- much faster to parse
     // eSpeed: NSDQ ITCH-style Binary
     // Both are multicast feeds with TCP recovery.
+
+    //ItchProcessor itchProcessor;
+    ItchSender itchSender;
 
     SpScRingBuffer<ItchMessage, 2> ringBuffer;
 
@@ -28,12 +33,10 @@ int main()
         ringBuffer.tryPush(i);        
     }
 
-    int x = 25;
-
+    std::cout << "Br" << std::endl;
     // Order Entry:
     // CME / BrokerTec: version of FIX
     // eSpeed: version of FIX
 
     // Memory Orderings
-    return x;
 }

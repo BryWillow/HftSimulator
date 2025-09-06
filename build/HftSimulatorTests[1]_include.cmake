@@ -1,5 +1,0 @@
-if(EXISTS "/Users/bryancamp/SoftwareDevelopment/cpp/professional/HftSimulator/build/HftSimulatorTests[1]_tests.cmake")
-  include("/Users/bryancamp/SoftwareDevelopment/cpp/professional/HftSimulator/build/HftSimulatorTests[1]_tests.cmake")
-else()
-  add_test(HftSimulatorTests_NOT_BUILT HftSimulatorTests_NOT_BUILT)
-endif()

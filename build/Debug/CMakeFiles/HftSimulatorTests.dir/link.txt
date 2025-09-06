@@ -1,0 +1,1 @@
+/usr/bin/clang++ -fsanitize=address -fno-omit-frame-pointer -g -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/HftSimulatorTests.dir/tests/test_spsc_ringbuffer.cpp.o -o /Users/bryancamp/SoftwareDevelopment/cpp/professional/HftSimulator/bin/Debug/HftSimulatorTests  lib/libgtest_main.a lib/libgtest.a

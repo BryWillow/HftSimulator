@@ -38,41 +38,34 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-# ------------------------------
-# 2. Add include directory
-# ------------------------------
+# Where binaries will be copied.
+#set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
+
+# Output binaries per configuration
+set(BIN_DIR ${CMAKE_SOURCE_DIR}/bin)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG ${BIN_DIR}/Debug)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE ${BIN_DIR}/Release)
+
+# The path to all header files.
 include_directories(${PROJECT_SOURCE_DIR}/include)
 
-# ------------------------------
-# 3. Add main executable
-# ------------------------------
-add_executable(HftSimulator
-    src/main.cpp
-)
+# The name / entry point of the main executable.
+add_executable(HftSimulator src/main.cpp)
 
-# ------------------------------------
-# 4. GoogleTest setup from local clone
-# ------------------------------------
+# Use a local clone of GoogleTest.
+# I got stuck on an issue with Fetch().
 add_subdirectory(external/googletest)
 enable_testing()
 
-# ------------------------------
-# 5. Add test executable
-# ------------------------------
-add_executable(HftSimulatorTests
-    tests/test_spsc_ringbuffer.cpp
-)
+# The name of the test executable.
+add_executable(HftSimulatorTests tests/test_spsc_ringbuffer.cpp)
 
-# Link GoogleTest
-target_link_libraries(HftSimulatorTests
-    gtest_main
-)
+# Link in GoogleTest to the to the test executable.
+target_link_libraries(HftSimulatorTests gtest_main)
 
-# Include project headers
+# Include project headers in the test executable.
 target_include_directories(HftSimulatorTests PRIVATE ${PROJECT_SOURCE_DIR}/include)
 
-# ------------------------------
-# 6. Enable CTest
-# ------------------------------
+# Include project GoogleTest in ctest.
 include(GoogleTest)
 gtest_discover_tests(HftSimulatorTests)

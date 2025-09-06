@@ -1,3 +1,5 @@
+#pragma once 
+
 #include <cstdint>  // for uint_32, uint_64
 #include <unistd.h> // fpr size_t 
 
