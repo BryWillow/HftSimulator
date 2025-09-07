@@ -1,10 +1,15 @@
-#pragma once 
+#pragma once
 
-#include <cstdint>  // for uint_32, uint_64
-#include <unistd.h> // fpr size_t 
+#include <cstddef>
+#include <cstdint>
+#include <stdexcept>
+#include <cstring>
 
-struct ItchMessage
-{
+/// @brief ItchMessage is parsed/decoded market data message used by our entire app.
+///        This is intentionally called 'ItchMessage' in case other non-Itch formats
+///        are added in the future that might contain additional information we find useful.
+#pragma pack(push, 1)  // strict layout, no padding
+struct ItchMessage {
     char msgType;
     char symbol[8];
     std::uint64_t orderId;
@@ -12,19 +17,16 @@ struct ItchMessage
     std::uint32_t quantity;
     char side;
 };
+#pragma pack(pop)
 
 constexpr size_t MarketDataMessageSize = sizeof(ItchMessage);
-constexpr size_t MessateTypeSizeBytes = sizeof(ItchMessage::msgType);
-constexpr size_t SymbolSizeBytes = sizeof(ItchMessage::symbol);
-constexpr size_t OrderIdSizeBytes = sizeof(ItchMessage::orderId);
-constexpr size_t PriceSizeBytes = sizeof(ItchMessage::price);
-constexpr size_t QuantitySizeBytes = sizeof(ItchMessage::quantity);
-constexpr size_t SideSizeBytes = sizeof(ItchMessage::side);
 
-constexpr size_t MessageTypeOffset = 0;
-constexpr size_t MessageSizeOffset = 1;
-constexpr size_t SymbolOffset = 3;
-constexpr size_t OrderIdOffset = 11;
-constexpr size_t PriceOffset = 19;
-constexpr size_t QuantityOffset = 23;
-constexpr size_t SideOffset = 27;
+constexpr size_t SymbolOffset   = offsetof(ItchMessage, symbol);
+constexpr size_t OrderIdOffset  = offsetof(ItchMessage, orderId);
+constexpr size_t PriceOffset    = offsetof(ItchMessage, price);
+constexpr size_t QuantityOffset = offsetof(ItchMessage, quantity);
+constexpr size_t SideOffset     = offsetof(ItchMessage, side);
+
+// Simple compile time sanity checks.
+static_assert(MarketDataMessageSize == 1 + 8 + 8 + 4 + 4 + 1, "Unexpected ItchMessage struct size");
+static_assert(SymbolOffset == 1, "Unexpected symbol offset");
