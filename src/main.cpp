@@ -5,53 +5,61 @@
 #include <vector>
 #include "hft_pinned_thread.h"
 #include "spsc_ringbuffer.h"
-#include "itch_connection.h"
+#include "hft_pinned_thread.h"
 #include "itch_message.h"
-#include "itch_sender.h"
+#include "itch_udp_replayer.h"
+#include "itch_udp_listener.h"
 
 int main()
 {
-    // Market Data:
-    // CME / BrokerTec: CME FIX/SBE (MDP 3.0) -- much faster to parse
-    // eSpeed: NSDQ ITCH-style Binary
-    // Both are multicast feeds with TCP recovery.
+    // 1. Create an SPSC ring buffer quere where:
+    //    Producer: UDP Market Data Receiver
+    //    Consumer: Strategy Hot Path
+    SpScRingBuffer<ItchMessage> buffer;
 
-    // Ring buffer - let's go with 2048 bytes instead of the default.
-    SpScRingBuffer<ItchMessage, 2048> marketDataQueue;
+    // 2. Create the UDP market-data listener.
+    //.   The whole point is to simulate receiving market data from an exchange.
+    //    The market data "played" back are FIX messages encoded with SBE (Simple Binary Encoding).
+    //    The market data is played back using timestamps, that make it intentionally bursty.
+    //    This happens on a single thread that's pinned to the CPU core of our choice.
+    //    Cam be stopped by setting the stopFlag below.
+    UdpItchListener listener(12345, buffer);
+    HftPinnedThread listenerThread(
+        [&](std::atomic<bool>& stopFlag) { listener.run(stopFlag); }, 0);
 
-    // Producer: Wrte market data to the SPSC ring buffer.
-    HftPinnedThread producer([&](std::atomic<bool>& stopFlag) {
-        int i = 0;
-        while (!stopFlag.load(std::memory_order_relaxed)) {
-            ItchMessage msg;
-            msg.msgType = 'A';
-            msg.orderId = 1;
-            msg.price = 1;
-            msg.quantity = 5;
-            msg.side = 5;
-            strcpy(msg.symbol, "AAPL");
-            marketDataQueue.tryPush(std::move(msg));
-            ++i;
+    // Setup for sending/playing messages from the the text file over UDP.
+    // (sends to localhost:12345).
+    // This essentially actys an exchange.
+    UdpMessageReplayer player("127.0.0.1", 12345);
+    std::thread sender([&]() {
+        for (int i = 0; i < 10; ++i) {
+            ItchMessage msg{};
+            msg.length = sizeof(ItchMessage);
+            msg.type   = 'A'; // Add order
+            std::snprintf(msg.payload, sizeof(msg.payload), "TestMsg%d", i);
+            player.send(msg);
+
+            std::this_thread::sleep_for(std::chrono::milliseconds(10));
         }
-    }, 0); // pinned to core 0
+    });
 
-    // Consumer: Readd market data from the SPSC ring buffer.
-    HftPinnedThread consumer([&](std::atomic<bool>& stopFlag) {
-        ItchMessage msg{};
-        while (!stopFlag.load(std::memory_order_relaxed)) {
-            while (marketDataQueue.tryPop(msg)) {
-                std::cout << "Price: " << msg.price << ", Symbol: " << msg.symbol << "\n";
-                //Execute strategy code.
-            }
+    // 6. Main loop: consume "replayed" UDP market data messagess.
+    //    This is the "hot path", this constantly polls the ring buff
+    int receivedCount = 0;
+    while (receivedCount < 10) {
+        ItchMessage msg;
+        if (buffer.pop(msg)) {
+            std::cout << "Received ITCH message: type=" << msg.type
+                      << " payload=" << msg.payload << "\n";
+            ++receivedCount;
         }
-    }, 1); // pinned to core 1
+    }
 
-    // Let threads run briefly
-    std::this_thread::sleep_for(std::chrono::seconds(1));
+    // 7. Cleanup
+    sender.join();
+    listenerThread.stop();  // signals stopFlag, joins thread
 
-    // Stop both threads safely
-    producer.stop();
-    consumer.stop();
-
+    std::cout << "All done!\n";
     return 0;
+
 }
