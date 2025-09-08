@@ -1,5 +1,4 @@
 #pragma once
-
 #include <arpa/inet.h>
 #include <netinet/in.h>
 #include <sys/socket.h>
@@ -10,27 +9,41 @@
 #include <iostream>
 #include <thread>
 #include <string>
+#include <filesystem>
 #include "itch_message.h"
+#include "itch_file_generator.h"
 
-// Encapsulates captured messages with timestamp (nanoseconds)
-struct CapturedMsg {
-    std::uint64_t ts; // capture timestamp in ns
-    ItchMessage msg;
-};
+
+//struct CapturedMsg {
+//    std::uint64_t tsNs;
+//    ItchMessage msg;
+//};
 
 class UdpMessageReplayer {
 public:
-    UdpMessageReplayer(const std::string& filePath,
-                const std::string& destIp,
-                uint16_t destPort,
-                double speedFactor = 1.0)
-        : _filePath(filePath),
+    UdpMessageReplayer(const std::string& fileName,
+                       const std::string& destIp,
+                       uint16_t destPort,
+                       double speedFactor = 1.0)
+        : _fileName(fileName),
           _destIp(destIp),
           _destPort(destPort),
           _speedFactor(speedFactor)
-    {}
+    {
+        std::filesystem::path dataDir("data");
+        if (!std::filesystem::exists(dataDir)) {
+            std::filesystem::create_directories(dataDir);
+        }
 
-    // Plays the captured messages at the original timing (scaled by speedFactor)
+        _filePath = dataDir / _fileName;
+
+        // Generate capture file if missing
+        if (!std::filesystem::exists(_filePath)) {
+            std::cout << _filePath << " not found. Generating capture file..." << std::endl;
+            GenerateItchCaptureFile(_fileName, 5000); // default 5000 messages
+        }
+    }
+
     void replay() {
         if (!setupSocket()) return;
 
@@ -40,25 +53,18 @@ public:
             return;
         }
 
-        // Don't simply blast market data - play it back at the specified rate.        
-        // Use the current time as the "seed" time.
         CapturedMsg msg;
         std::uint64_t firstTs = 0;
         auto replayStart = std::chrono::steady_clock::now();
 
         while (inputFile.read(reinterpret_cast<char*>(&msg), sizeof(msg))) {
-            if (firstTs == 0) firstTs = msg.ts;
+            if (firstTs == 0) firstTs = msg.tsNs;
 
-            // Compute the time to send the next market data packet.
-            std::uint64_t deltaNs = static_cast<std::uint64_t>(
-                (msg.ts - firstTs) / _speedFactor
-            );
-
-            // Wait until it's time to send the next packet.
+            std::uint64_t deltaNs = static_cast<std::uint64_t>((msg.tsNs - firstTs) / _speedFactor);
             auto targetTime = replayStart + std::chrono::nanoseconds(deltaNs);
+
             std::this_thread::sleep_until(targetTime);
 
-            // Send the next packet.
             ssize_t sent = sendto(_socketDescriptor, &msg.msg, sizeof(msg.msg), 0,
                                   reinterpret_cast<sockaddr*>(&_destAddr), sizeof(_destAddr));
             if (sent < 0) {
@@ -67,7 +73,6 @@ public:
             }
         }
 
-        // We've sent all the entries in the file.
         close(_socketDescriptor);
         _socketDescriptor = -1;
     }
@@ -92,10 +97,11 @@ private:
         return true;
     }
 
-    std::string _filePath;
+    std::filesystem::path _filePath;
+    std::string _fileName;
     std::string _destIp;
     uint16_t _destPort;
-    double _speedFactor; // 1.0 = real-time, 2.0 = 2x faster
+    double _speedFactor;
 
     int _socketDescriptor = -1;
     sockaddr_in _destAddr{};

@@ -10,14 +10,12 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__xlocale.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_abort.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_bounds.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctermid.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_locale.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_mb_cur_max.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_printf.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_static_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdlib.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_string.h \
@@ -41,14 +39,16 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/_endian.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/_limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/_mcontext.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/_param.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/_types.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/endian.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/signal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/types.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/assert.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arpa/inet.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/ctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/errno.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/gethostuuid.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/libkern/_OSByteOrder.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/libkern/arm/_OSByteOrder.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/limits.h \
@@ -57,6 +57,7 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/mach/machine/_structs.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/_endian.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/_mcontext.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/_param.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/_types.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/endian.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/limits.h \
@@ -66,6 +67,9 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/malloc/_malloc_type.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/malloc/_ptrcheck.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/math.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/net/net_kev.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/netinet/in.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/netinet6/in6.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/nl_types.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/pthread.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/pthread/pthread_impl.h \
@@ -92,6 +96,7 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_rwlockattr_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_types.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_select.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_symbol_aliasing.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_blkcnt_t.h \
@@ -121,6 +126,7 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_int64_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_int8_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_intptr_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_iovec_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_key_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_mach_port_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_mbstate_t.h \
@@ -129,12 +135,15 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_null.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_off_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_pid_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_posix_vdisable.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_rsize_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_rune_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_sa_family_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_seek_set.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_sigaltstack.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_sigset_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_size_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_socklen_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_ssize_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_suseconds_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_time_t.h \
@@ -151,18 +160,23 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_uid_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_uintptr_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_useconds_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_uuid_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_va_list.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_wchar_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_wint_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/appleapiopts.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/constrained_ctypes.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/errno.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/qos.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/resource.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/select.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/signal.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/socket.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/syslimits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/types.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/unistd.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/wait.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/time.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/unistd.h \
@@ -198,9 +212,10 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdint.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/share/asan_ignorelist.txt \
   /Users/bryancamp/SoftwareDevelopment/cpp/professional/HftSimulator/include/hft_pinned_thread.h \
-  /Users/bryancamp/SoftwareDevelopment/cpp/professional/HftSimulator/include/itch_connection.h \
+  /Users/bryancamp/SoftwareDevelopment/cpp/professional/HftSimulator/include/itch_file_generator.h \
   /Users/bryancamp/SoftwareDevelopment/cpp/professional/HftSimulator/include/itch_message.h \
-  /Users/bryancamp/SoftwareDevelopment/cpp/professional/HftSimulator/include/itch_sender.h \
+  /Users/bryancamp/SoftwareDevelopment/cpp/professional/HftSimulator/include/itch_udp_listener.h \
+  /Users/bryancamp/SoftwareDevelopment/cpp/professional/HftSimulator/include/itch_udp_replayer.h \
   /Users/bryancamp/SoftwareDevelopment/cpp/professional/HftSimulator/include/spsc_ringbuffer.h \
   /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/adjacent_find.h \
   /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/all_of.h \
@@ -433,19 +448,44 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
   /opt/homebrew/opt/llvm/include/c++/v1/__bit/rotate.h \
   /opt/homebrew/opt/llvm/include/c++/v1/__bit_reference \
   /opt/homebrew/opt/llvm/include/c++/v1/__charconv/chars_format.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__charconv/from_chars_integral.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__charconv/from_chars_result.h \
   /opt/homebrew/opt/llvm/include/c++/v1/__charconv/tables.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__charconv/to_chars.h \
   /opt/homebrew/opt/llvm/include/c++/v1/__charconv/to_chars_base_10.h \
   /opt/homebrew/opt/llvm/include/c++/v1/__charconv/to_chars_floating_point.h \
   /opt/homebrew/opt/llvm/include/c++/v1/__charconv/to_chars_integral.h \
   /opt/homebrew/opt/llvm/include/c++/v1/__charconv/to_chars_result.h \
   /opt/homebrew/opt/llvm/include/c++/v1/__charconv/traits.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__chrono/calendar.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__chrono/concepts.h \
   /opt/homebrew/opt/llvm/include/c++/v1/__chrono/convert_to_timespec.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__chrono/convert_to_tm.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__chrono/day.h \
   /opt/homebrew/opt/llvm/include/c++/v1/__chrono/duration.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__chrono/exception.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__chrono/file_clock.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__chrono/formatter.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__chrono/hh_mm_ss.h \
   /opt/homebrew/opt/llvm/include/c++/v1/__chrono/high_resolution_clock.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__chrono/literals.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__chrono/local_info.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__chrono/month.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__chrono/month_weekday.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__chrono/monthday.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__chrono/ostream.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__chrono/parser_std_format_spec.h \
   /opt/homebrew/opt/llvm/include/c++/v1/__chrono/statically_widen.h \
   /opt/homebrew/opt/llvm/include/c++/v1/__chrono/steady_clock.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__chrono/sys_info.h \
   /opt/homebrew/opt/llvm/include/c++/v1/__chrono/system_clock.h \
   /opt/homebrew/opt/llvm/include/c++/v1/__chrono/time_point.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__chrono/weekday.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__chrono/year.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__chrono/year_month.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__chrono/year_month_day.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__chrono/year_month_weekday.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__chrono/zoned_time.h \
   /opt/homebrew/opt/llvm/include/c++/v1/__compare/common_comparison_category.h \
   /opt/homebrew/opt/llvm/include/c++/v1/__compare/compare_partial_order_fallback.h \
   /opt/homebrew/opt/llvm/include/c++/v1/__compare/compare_strong_order_fallback.h \
@@ -497,6 +537,22 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
   /opt/homebrew/opt/llvm/include/c++/v1/__exception/nested_exception.h \
   /opt/homebrew/opt/llvm/include/c++/v1/__exception/operations.h \
   /opt/homebrew/opt/llvm/include/c++/v1/__exception/terminate.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__filesystem/copy_options.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__filesystem/directory_entry.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__filesystem/directory_iterator.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__filesystem/directory_options.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__filesystem/file_status.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__filesystem/file_time_type.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__filesystem/file_type.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__filesystem/filesystem_error.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__filesystem/operations.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__filesystem/path.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__filesystem/path_iterator.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__filesystem/perm_options.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__filesystem/perms.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__filesystem/recursive_directory_iterator.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__filesystem/space_info.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__filesystem/u8path.h \
   /opt/homebrew/opt/llvm/include/c++/v1/__format/buffer.h \
   /opt/homebrew/opt/llvm/include/c++/v1/__format/concepts.h \
   /opt/homebrew/opt/llvm/include/c++/v1/__format/container_adaptor.h \
@@ -682,11 +738,59 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
   /opt/homebrew/opt/llvm/include/c++/v1/__mutex/tag_types.h \
   /opt/homebrew/opt/llvm/include/c++/v1/__mutex/unique_lock.h \
   /opt/homebrew/opt/llvm/include/c++/v1/__node_handle \
+  /opt/homebrew/opt/llvm/include/c++/v1/__numeric/accumulate.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__numeric/adjacent_difference.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__numeric/exclusive_scan.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__numeric/gcd_lcm.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__numeric/inclusive_scan.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__numeric/inner_product.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__numeric/iota.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__numeric/midpoint.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__numeric/partial_sum.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__numeric/pstl.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__numeric/reduce.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__numeric/saturation_arithmetic.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__numeric/transform_exclusive_scan.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__numeric/transform_inclusive_scan.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__numeric/transform_reduce.h \
   /opt/homebrew/opt/llvm/include/c++/v1/__ostream/basic_ostream.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__random/bernoulli_distribution.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__random/binomial_distribution.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__random/cauchy_distribution.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__random/chi_squared_distribution.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__random/clamp_to_integral.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__random/default_random_engine.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__random/discard_block_engine.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__random/discrete_distribution.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__random/exponential_distribution.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__random/extreme_value_distribution.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__random/fisher_f_distribution.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__random/gamma_distribution.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__random/generate_canonical.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__random/geometric_distribution.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__random/independent_bits_engine.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__random/is_seed_sequence.h \
   /opt/homebrew/opt/llvm/include/c++/v1/__random/is_valid.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__random/knuth_b.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__random/linear_congruential_engine.h \
   /opt/homebrew/opt/llvm/include/c++/v1/__random/log2.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__random/lognormal_distribution.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__random/mersenne_twister_engine.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__random/negative_binomial_distribution.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__random/normal_distribution.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__random/piecewise_constant_distribution.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__random/piecewise_linear_distribution.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__random/poisson_distribution.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__random/random_device.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__random/ranlux.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__random/seed_seq.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__random/shuffle_order_engine.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__random/student_t_distribution.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__random/subtract_with_carry_engine.h \
   /opt/homebrew/opt/llvm/include/c++/v1/__random/uniform_int_distribution.h \
   /opt/homebrew/opt/llvm/include/c++/v1/__random/uniform_random_bit_generator.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__random/uniform_real_distribution.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__random/weibull_distribution.h \
   /opt/homebrew/opt/llvm/include/c++/v1/__ranges/access.h \
   /opt/homebrew/opt/llvm/include/c++/v1/__ranges/concepts.h \
   /opt/homebrew/opt/llvm/include/c++/v1/__ranges/container_compatible_range.h \
@@ -784,6 +888,7 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
   /opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_empty.h \
   /opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_enum.h \
   /opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_equality_comparable.h \
+  /opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_execution_policy.h \
   /opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_final.h \
   /opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_floating_point.h \
   /opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_function.h \
@@ -885,9 +990,10 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
   /opt/homebrew/opt/llvm/include/c++/v1/atomic \
   /opt/homebrew/opt/llvm/include/c++/v1/bit \
   /opt/homebrew/opt/llvm/include/c++/v1/bitset \
-  /opt/homebrew/opt/llvm/include/c++/v1/cassert \
   /opt/homebrew/opt/llvm/include/c++/v1/cctype \
   /opt/homebrew/opt/llvm/include/c++/v1/cerrno \
+  /opt/homebrew/opt/llvm/include/c++/v1/charconv \
+  /opt/homebrew/opt/llvm/include/c++/v1/chrono \
   /opt/homebrew/opt/llvm/include/c++/v1/climits \
   /opt/homebrew/opt/llvm/include/c++/v1/clocale \
   /opt/homebrew/opt/llvm/include/c++/v1/cmath \
@@ -906,9 +1012,14 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
   /opt/homebrew/opt/llvm/include/c++/v1/deque \
   /opt/homebrew/opt/llvm/include/c++/v1/errno.h \
   /opt/homebrew/opt/llvm/include/c++/v1/exception \
+  /opt/homebrew/opt/llvm/include/c++/v1/execution \
+  /opt/homebrew/opt/llvm/include/c++/v1/filesystem \
   /opt/homebrew/opt/llvm/include/c++/v1/format \
+  /opt/homebrew/opt/llvm/include/c++/v1/forward_list \
+  /opt/homebrew/opt/llvm/include/c++/v1/fstream \
   /opt/homebrew/opt/llvm/include/c++/v1/functional \
   /opt/homebrew/opt/llvm/include/c++/v1/initializer_list \
+  /opt/homebrew/opt/llvm/include/c++/v1/iomanip \
   /opt/homebrew/opt/llvm/include/c++/v1/ios \
   /opt/homebrew/opt/llvm/include/c++/v1/iosfwd \
   /opt/homebrew/opt/llvm/include/c++/v1/iostream \
@@ -921,10 +1032,12 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
   /opt/homebrew/opt/llvm/include/c++/v1/memory \
   /opt/homebrew/opt/llvm/include/c++/v1/mutex \
   /opt/homebrew/opt/llvm/include/c++/v1/new \
+  /opt/homebrew/opt/llvm/include/c++/v1/numeric \
   /opt/homebrew/opt/llvm/include/c++/v1/optional \
   /opt/homebrew/opt/llvm/include/c++/v1/ostream \
   /opt/homebrew/opt/llvm/include/c++/v1/print \
   /opt/homebrew/opt/llvm/include/c++/v1/queue \
+  /opt/homebrew/opt/llvm/include/c++/v1/random \
   /opt/homebrew/opt/llvm/include/c++/v1/ratio \
   /opt/homebrew/opt/llvm/include/c++/v1/sstream \
   /opt/homebrew/opt/llvm/include/c++/v1/stack \
@@ -961,8 +1074,6 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/typeinfo:
 
-/opt/homebrew/opt/llvm/include/c++/v1/type_traits:
-
 /opt/homebrew/opt/llvm/include/c++/v1/tuple:
 
 /opt/homebrew/opt/llvm/include/c++/v1/thread:
@@ -981,6 +1092,8 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/sstream:
 
+/opt/homebrew/opt/llvm/include/c++/v1/random:
+
 /opt/homebrew/opt/llvm/include/c++/v1/ostream:
 
 /opt/homebrew/opt/llvm/include/c++/v1/memory:
@@ -988,8 +1101,6 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 /opt/homebrew/opt/llvm/include/c++/v1/math.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/locale.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/locale:
 
 /opt/homebrew/opt/llvm/include/c++/v1/iterator:
 
@@ -999,9 +1110,13 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/ios:
 
-/opt/homebrew/opt/llvm/include/c++/v1/errno.h:
+/opt/homebrew/opt/llvm/include/c++/v1/forward_list:
 
-/opt/homebrew/opt/llvm/include/c++/v1/ctype.h:
+/opt/homebrew/opt/llvm/include/c++/v1/locale:
+
+/opt/homebrew/opt/llvm/include/c++/v1/execution:
+
+/opt/homebrew/opt/llvm/include/c++/v1/errno.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/ctime:
 
@@ -1037,8 +1152,6 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__utility/is_pointer_in_range.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__utility/integer_sequence.h:
-
 /opt/homebrew/opt/llvm/include/c++/v1/__utility/forward_like.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/print:
@@ -1062,8 +1175,6 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 /opt/homebrew/opt/llvm/include/c++/v1/streambuf:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__type_traits/unwrap_ref.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/underlying_type.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__type_traits/type_list.h:
 
@@ -1093,13 +1204,9 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__type_traits/nat.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/make_signed.h:
-
 /opt/homebrew/opt/llvm/include/c++/v1/__type_traits/make_const_lvalue_ref.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_volatile.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_unsigned_integer.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_union.h:
 
@@ -1127,47 +1234,61 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_object.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/includes.h:
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_null_pointer.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_nothrow_convertible.h:
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_nothrow_destructible.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_nothrow_constructible.h:
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_nothrow_assignable.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_replace.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_literal_type.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_fundamental.h:
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_integral.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_pointer.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_function.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/exception:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdlib.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__stop_token/stop_state.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_floating_point.h:
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_final.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_equality_comparable.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_enum.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_sigset_t.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_destructible.h:
-
 /opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_constructible.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_constant_evaluated.h:
 
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_const.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_compound.h:
+
 /opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_char_like_type.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_callable.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_bounded_array.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_assignable.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/ratio:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_arithmetic.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_aggregate.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_abstract.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/integral_constant.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/mutex:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__type_traits/has_virtual_destructor.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/extent.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__utility/no_destroy.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/enable_if.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/disjunction.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__type_traits/desugars_to.h:
 
@@ -1175,85 +1296,73 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__type_traits/decay.h:
 
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/datasizeof.h:
+
 /opt/homebrew/opt/llvm/include/c++/v1/__type_traits/copy_cvref.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_pid_t.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_generate_n.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/conjunction.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__type_traits/conditional.h:
 
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/common_type.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/common_reference.h:
+
 /opt/homebrew/opt/llvm/include/c++/v1/__type_traits/can_extract_key.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_compound.h:
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_member_pointer.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/aligned_union.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__type_traits/aligned_storage.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__tuple/sfinae_helpers.h:
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/add_lvalue_reference.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_bounded_array.h:
+/opt/homebrew/opt/llvm/include/c++/v1/__tuple/tuple_types.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__tuple/tuple_like_no_subrange.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__tuple/tuple_indices.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_standard_layout.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__tuple/tuple_element.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__tuple/sfinae_helpers.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__tuple/make_tuple_types.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_intptr_t.h:
+/opt/homebrew/opt/llvm/include/c++/v1/__tuple/ignore.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__thread/support.h:
+/opt/homebrew/opt/llvm/include/c++/v1/__thread/thread.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__concepts/derived_from.h:
+/opt/homebrew/opt/llvm/include/c++/v1/__thread/this_thread.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__thread/poll_with_backoff.h:
+/opt/homebrew/opt/llvm/include/c++/v1/__thread/support/pthread.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/integral_constant.h:
+/opt/homebrew/opt/llvm/include/c++/v1/__thread/formatter.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/resource.h:
+/opt/homebrew/opt/llvm/include/c++/v1/__system_error/system_error.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__thread/jthread.h:
+/opt/homebrew/opt/llvm/include/c++/v1/new:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_is_sorted_until.h:
+/opt/homebrew/opt/llvm/include/c++/v1/__system_error/error_condition.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__system_error/error_category.h:
+/opt/homebrew/opt/llvm/include/c++/v1/__system_error/errc.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__string/extern_template_lists.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__format/enable_insertable.h:
+/opt/homebrew/opt/llvm/include/c++/v1/__stop_token/intrusive_shared_ptr.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__string/constexpr_c_functions.h:
+/opt/homebrew/opt/llvm/include/c++/v1/__stop_token/intrusive_list_view.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_convertible.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__compare/partial_order.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__string/char_traits.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_clamp.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__stop_token/stop_source.h:
+/opt/homebrew/opt/llvm/include/c++/v1/__std_mbstate_t.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/cwchar:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__split_buffer:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__mutex/tag_types.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__ranges/view_interface.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_int16_t.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__ranges/size.h:
-
 /opt/homebrew/opt/llvm/include/c++/v1/__ranges/ref_view.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_reference_wrapper.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__iterator/aliasing_iterator.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__ranges/movable_box.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__fwd/deque.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__ranges/enable_view.h:
+/opt/homebrew/opt/llvm/include/c++/v1/__ranges/from_range.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__mutex/once_flag.h:
 
@@ -1271,17 +1380,69 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__ranges/container_compatible_range.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__stop_token/intrusive_list_view.h:
-
 /opt/homebrew/opt/llvm/include/c++/v1/__ranges/access.h:
 
+/opt/homebrew/opt/llvm/include/c++/v1/__random/shuffle_order_engine.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/remove_copy.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__memory/allocator_traits.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__random/ranlux.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/cstdint:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__functional/ranges_operations.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__random/negative_binomial_distribution.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__random/mersenne_twister_engine.h:
+
 /opt/homebrew/opt/llvm/include/c++/v1/__random/log2.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__random/knuth_b.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_unsigned_integer.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__random/is_seed_sequence.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__random/geometric_distribution.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__tuple/tuple_like_ext.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__random/extreme_value_distribution.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__random/discard_block_engine.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__random/binomial_distribution.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/add_cv.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__random/bernoulli_distribution.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__atomic/contention_t.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/iter_swap.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__ostream/basic_ostream.h:
+
+/Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stdarg_header_macro.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__numeric/reduce.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__utility/exchange.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_inplace_merge.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__numeric/pstl.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__numeric/inner_product.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__numeric/gcd_lcm.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_xlocale.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__numeric/exclusive_scan.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__node_handle:
 
@@ -1307,11 +1468,15 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__memory/uses_allocator_construction.h:
 
+/opt/homebrew/opt/llvm/include/c++/v1/charconv:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_cond_t.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__memory/uninitialized_algorithms.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_base_of.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__chrono/monthday.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__memory/temp_value.h:
 
@@ -1319,11 +1484,13 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__memory/out_ptr.h:
 
+/opt/homebrew/opt/llvm/include/c++/v1/filesystem:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__numeric/transform_exclusive_scan.h:
+
 /opt/homebrew/opt/llvm/include/c++/v1/__memory/inout_ptr.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__memory/destruct_n.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_final.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/lexicographical_compare.h:
 
@@ -1332,8 +1499,6 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_rune_t.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__memory/concepts.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__ranges/from_range.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_transform.h:
 
@@ -1373,6 +1538,10 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__math/min_max.h:
 
+/opt/homebrew/opt/llvm/include/c++/v1/__bit/bit_width.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__random/student_t_distribution.h:
+
 /opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_valid_expansion.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_stable_sort.h:
@@ -1380,8 +1549,6 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 /opt/homebrew/opt/llvm/include/c++/v1/__math/fma.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__math/exponential_functions.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/add_lvalue_reference.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__math/copysign.h:
 
@@ -1391,9 +1558,21 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__locale:
 
+/opt/homebrew/opt/llvm/include/c++/v1/__thread/id.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__iterator/unreachable_sentinel.h:
+
 /opt/homebrew/opt/llvm/include/c++/v1/__iterator/size.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__iterator/reverse_access.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__variant/monostate.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_reference.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/find_if.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__random/uniform_real_distribution.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_unsigned.h:
 
@@ -1409,6 +1588,8 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__iterator/ostreambuf_iterator.h:
 
+/opt/homebrew/opt/llvm/include/c++/v1/__random/random_device.h:
+
 /opt/homebrew/opt/llvm/include/c++/v1/__iterator/ostream_iterator.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_signed.h:
@@ -1416,14 +1597,6 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 /opt/homebrew/opt/llvm/include/c++/v1/__iterator/move_sentinel.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__iterator/move_iterator.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_generate.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__iterator/mergeable.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__fwd/string.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/has_unique_object_representation.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__iterator/iterator_traits.h:
 
@@ -1439,21 +1612,13 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__iterator/bounded_iter.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/aligned_union.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_member_pointer.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_uint64_t.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/alignment_of.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__tuple/tuple_types.h:
-
 /opt/homebrew/opt/llvm/include/c++/v1/__iterator/back_insert_iterator.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__chrono/steady_clock.h:
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_reference_wrapper.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_array.h:
+/opt/homebrew/opt/llvm/include/c++/v1/__ranges/movable_box.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__iterator/aliasing_iterator.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_int8_t.h:
 
@@ -1475,7 +1640,13 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/unwrap_iter.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_uuid_t.h:
+
 /opt/homebrew/opt/llvm/include/c++/v1/__fwd/subrange.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/has_unique_object_representation.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__fwd/string.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__fwd/stack.h:
 
@@ -1489,6 +1660,8 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__memory_resource/polymorphic_allocator.h:
 
+/Users/bryancamp/SoftwareDevelopment/cpp/professional/HftSimulator/include/itch_udp_replayer.h:
+
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/search_n.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/fill_n.h:
@@ -1499,25 +1672,21 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__fwd/ios.h:
 
+/opt/homebrew/opt/llvm/include/c++/v1/__ranges/enable_view.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__fwd/deque.h:
+
 /opt/homebrew/opt/llvm/include/c++/v1/__fwd/complex.h:
 
+/opt/homebrew/opt/llvm/include/c++/v1/__fwd/bit_reference.h:
+
 /opt/homebrew/opt/llvm/include/c++/v1/__fwd/array.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__functional/invoke.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__functional/weak_result_type.h:
 
 /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_max_align_t.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__memory/assume_aligned.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__functional/unary_function.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/cstdint:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__functional/ranges_operations.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/disjunction.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__iterator/iter_swap.h:
 
@@ -1527,13 +1696,11 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/unique_copy.h:
 
+/opt/homebrew/opt/llvm/include/c++/v1/__chrono/exception.h:
+
 /opt/homebrew/opt/llvm/include/c++/v1/__functional/not_fn.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__functional/mem_fun_ref.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/remove_copy.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__memory/allocator_traits.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__functional/function.h:
 
@@ -1547,10 +1714,6 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__functional/binary_negate.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__iterator/segmented_iterator.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_allocator.h:
-
 /opt/homebrew/opt/llvm/include/c++/v1/__functional/binary_function.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__math/hyperbolic_functions.h:
@@ -1560,10 +1723,6 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_fd_def.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__format/range_formatter.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/add_volatile.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/add_const.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__format/format_to_n_result.h:
 
@@ -1575,6 +1734,10 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__format/parser_std_format_spec.h:
 
+/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/set_union.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__random/gamma_distribution.h:
+
 /opt/homebrew/opt/llvm/include/c++/v1/cwctype:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__format/formatter_string.h:
@@ -1583,13 +1746,21 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__math/trigonometric_functions.h:
 
+/opt/homebrew/opt/llvm/include/c++/v1/__filesystem/directory_iterator.h:
+
 /opt/homebrew/opt/llvm/include/c++/v1/__format/formatter_integer.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__format/formatter_char.h:
 
+/opt/homebrew/opt/llvm/include/c++/v1/__random/discrete_distribution.h:
+
 /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stddef.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__format/formatter_bool.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__functional/weak_result_type.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__functional/invoke.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__format/format_parse_context.h:
 
@@ -1599,15 +1770,23 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__format/format_args.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/limits:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__format/format_arg_store.h:
-
 /opt/homebrew/opt/llvm/include/c++/v1/__format/format_arg.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__format/escaped_output_table.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__format/concepts.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__filesystem/space_info.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__filesystem/perm_options.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/make_signed.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__filesystem/file_type.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__filesystem/file_status.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__filesystem/copy_options.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/wctype.h:
 
@@ -1625,13 +1804,9 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__exception/nested_exception.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__exception/exception.h:
-
 /opt/homebrew/opt/llvm/include/c++/v1/__fwd/vector.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__debug_utils/strict_weak_ordering_check.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__system_error/system_error.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/concepts:
 
@@ -1639,13 +1814,9 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__configuration/platform.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/common_type.h:
-
 /opt/homebrew/opt/llvm/include/c++/v1/__configuration/language.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__config:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__tuple/ignore.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__concepts/totally_ordered.h:
 
@@ -1657,15 +1828,25 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__concepts/predicate.h:
 
+/opt/homebrew/opt/llvm/include/c++/v1/__filesystem/filesystem_error.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__chrono/year_month_day.h:
+
 /opt/homebrew/opt/llvm/include/c++/v1/__concepts/movable.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__concepts/invocable.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sched.h:
-
 /opt/homebrew/opt/llvm/include/c++/v1/__stop_token/atomic_unique_lock.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sched.h:
+
 /opt/homebrew/opt/llvm/include/c++/v1/__concepts/different_from.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__random/normal_distribution.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__thread/poll_with_backoff.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__concepts/derived_from.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__iterator/front_insert_iterator.h:
 
@@ -1674,6 +1855,8 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 /opt/homebrew/opt/llvm/include/c++/v1/__concepts/convertible_to.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__concepts/constructible.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__random/generate_canonical.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__type_traits/remove_volatile.h:
 
@@ -1699,6 +1882,8 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__compare/compare_three_way_result.h:
 
+/opt/homebrew/opt/llvm/include/c++/v1/__numeric/adjacent_difference.h:
+
 /opt/homebrew/opt/llvm/include/c++/v1/__math/fdim.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__compare/compare_three_way.h:
@@ -1711,11 +1896,37 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__compare/compare_strong_order_fallback.h:
 
+/opt/homebrew/opt/llvm/include/c++/v1/__chrono/zoned_time.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__chrono/year_month_weekday.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/type_traits:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__random/cauchy_distribution.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__chrono/weekday.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/limits:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__format/format_arg_store.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__chrono/sys_info.h:
+
 /opt/homebrew/opt/llvm/include/c++/v1/__chrono/statically_widen.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__chrono/parser_std_format_spec.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__chrono/ostream.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/minmax.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__chrono/local_info.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__fwd/streambuf.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__chrono/high_resolution_clock.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__chrono/formatter.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__concepts/copyable.h:
 
@@ -1724,6 +1935,24 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 /opt/homebrew/opt/llvm/include/c++/v1/__memory/voidify.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__chrono/duration.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/rank.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_int32_t.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__numeric/transform_reduce.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__chrono/day.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__utility/to_underlying.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/find_segment_if.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__chrono/convert_to_tm.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__atomic/memory_order.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__chrono/calendar.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__charconv/traits.h:
 
@@ -1737,11 +1966,23 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__charconv/to_chars_floating_point.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_assignable.h:
+/opt/homebrew/opt/llvm/include/c++/v1/__charconv/to_chars.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_key_t.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__charconv/from_chars_result.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__random/fisher_f_distribution.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__charconv/from_chars_integral.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__bit/has_single_bit.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__format/formatter_integral.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__compare/compare_partial_order_fallback.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__chrono/month_weekday.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__bit/blsr.h:
 
@@ -1751,13 +1992,9 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__bit/invert_if.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__bit/bit_width.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/signal.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__bit/bit_floor.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__atomic/memory_order.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__atomic/fence.h:
 
@@ -1765,17 +2002,25 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__atomic/cxx_atomic_impl.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/datasizeof.h:
-
 /opt/homebrew/opt/llvm/include/c++/v1/__fwd/format.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__atomic/check_memory_order.h:
 
+/opt/homebrew/opt/llvm/include/c++/v1/__random/subtract_with_carry_engine.h:
+
 /opt/homebrew/opt/llvm/include/c++/v1/__configuration/compiler.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__random/default_random_engine.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/prev_permutation.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__atomic/atomic_lock_free.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/underlying_type.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__chrono/year_month.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__atomic/atomic_init.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__type_traits/remove_reference.h:
 
@@ -1787,25 +2032,39 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__assert:
 
+/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/unique.h:
+
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_search_n.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/uniform_random_bit_generator_adaptor.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__configuration/abi.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/transform.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__ranges/concepts.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/three_way_comp_ref_type.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/cstddef:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/swap_ranges.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__iterator/insert_iterator.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/stable_sort.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_fd_setsize.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_fsblkcnt_t.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__tuple/tuple_size.h:
+/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/sort.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/sort_heap.h:
+/opt/homebrew/opt/llvm/include/c++/v1/__random/weibull_distribution.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__iterator/iterator.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/simd_utils.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/sift_down.h:
-
-/Users/bryancamp/SoftwareDevelopment/cpp/professional/HftSimulator/src/main.cpp:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/shift_right.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__type_traits/add_rvalue_reference.h:
 
@@ -1819,13 +2078,13 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/rotate_copy.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__system_error/errc.h:
-
 /opt/homebrew/opt/llvm/include/c++/v1/__atomic/atomic_ref.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/reverse_copy.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/time.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__numeric/accumulate.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/set_symmetric_difference.h:
 
@@ -1841,21 +2100,19 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/replace.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/simd_utils.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__iterator/iterator.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_key_t.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/remove_copy_if.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__concepts/equality_comparable.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/cassert:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/__endian.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__charconv/chars_format.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/alignment_of.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_uint64_t.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_unique_copy.h:
 
@@ -1867,9 +2124,15 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_swap_ranges.h:
 
+/opt/homebrew/opt/llvm/include/c++/v1/__numeric/transform_inclusive_scan.h:
+
 /opt/homebrew/opt/llvm/include/c++/v1/__utility/private_constructor_tag.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_shuffle.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__random/lognormal_distribution.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__chrono/literals.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_set_union.h:
 
@@ -1878,6 +2141,12 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_fd_isset.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_set_difference.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__functional/is_transparent.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/lazy.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_search.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__concepts/swappable.h:
 
@@ -1899,15 +2168,13 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_replace_copy.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_callable.h:
-
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_minmax_element.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_max_element.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/new:
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_literal_type.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__system_error/error_condition.h:
+/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_replace.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__fwd/fstream.h:
 
@@ -1917,25 +2184,29 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_copy_if.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__thread/support/pthread.h:
-
 /opt/homebrew/opt/llvm/include/c++/v1/__functional/identity.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_move.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__iterator/empty.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_rwlock_t.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_lexicographical_compare.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/sample.h:
-
 /opt/homebrew/opt/llvm/include/c++/v1/__functional/boyer_moore_searcher.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/sample.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_iterator_concept.h:
 
+/opt/homebrew/opt/llvm/include/c++/v1/__system_error/error_category.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_is_sorted_until.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__random/independent_bits_engine.h:
+
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_is_permutation.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__filesystem/u8path.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__chrono/system_clock.h:
 
@@ -1957,23 +2228,31 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_is_heap.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__utility/exchange.h:
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/conjunction.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_inplace_merge.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_pid_t.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__random/linear_congruential_engine.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_generate_n.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__charconv/to_chars_base_10.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__memory/allocate_at_least.h:
 
+/opt/homebrew/opt/llvm/include/c++/v1/__iterator/mergeable.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_generate.h:
+
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_for_each.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__random/clamp_to_integral.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__concepts/arithmetic.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_find_if.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__ranges/concepts.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/three_way_comp_ref_type.h:
+/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_fill_n.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__format/formatter_tuple.h:
 
@@ -1991,6 +2270,8 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_copy_n.h:
 
+/opt/homebrew/opt/llvm/include/c++/v1/__random/piecewise_constant_distribution.h:
+
 /opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_unbounded_array.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__system_error/error_code.h:
@@ -2007,9 +2288,19 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_contains.h:
 
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_convertible.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__string/char_traits.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__compare/partial_order.h:
+
 /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stdarg_va_list.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/copy_backward.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__stop_token/stop_source.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_clamp.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_any_of.h:
 
@@ -2025,6 +2316,10 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_remove_copy_if.h:
 
+/opt/homebrew/opt/llvm/include/c++/v1/__string/constexpr_c_functions.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__format/enable_insertable.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_nl_item.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdio.h:
@@ -2032,10 +2327,6 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/pstl.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/partition_point.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__iterator/ranges_iterator_traits.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_implicitly_default_constructible.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_mutexattr_t.h:
 
@@ -2046,6 +2337,8 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 /opt/homebrew/opt/llvm/include/c++/v1/__bit/countr.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__locale_dir/locale_base_api/bsd_locale_defaults.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__filesystem/recursive_directory_iterator.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_seek_set.h:
 
@@ -2062,6 +2355,10 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/nth_element.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__fwd/functional.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_nlink_t.h:
+
+/Users/bryancamp/SoftwareDevelopment/cpp/professional/HftSimulator/include/itch_udp_listener.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__type_traits/make_32_64_or_128_bit.h:
 
@@ -2085,11 +2382,17 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/min_element.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_mach_port_t.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__filesystem/perms.h:
+
 /opt/homebrew/opt/llvm/include/c++/v1/__functional/binder1st.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__bit/countl.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/max_element.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__chrono/month.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_find_end.h:
 
@@ -2111,7 +2414,11 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/inplace_merge.h:
 
+/opt/homebrew/opt/llvm/include/c++/v1/fstream:
+
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/lexicographical_compare_three_way.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__random/exponential_distribution.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/is_sorted.h:
 
@@ -2127,11 +2434,19 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/is_heap_until.h:
 
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_nothrow_convertible.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_nothrow_constructible.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/includes.h:
+
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/in_out_out_result.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/copy.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/equal_range.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__filesystem/directory_entry.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_reverse.h:
 
@@ -2146,10 +2461,6 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/none_of.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/half_positive.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/cstddef:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/swap_ranges.h:
 
 /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stdarg___va_copy.h:
 
@@ -2171,27 +2482,23 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__bit/rotate.h:
 
+/opt/homebrew/opt/llvm/include/c++/v1/chrono:
+
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_equal_range.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/stdexcept:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/for_each_n.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_posix_vdisable.h:
+
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/for_each.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__utility/to_underlying.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/find_segment_if.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/for_each_segment.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__variant/monostate.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_reference.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/find_if.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/syslimits.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_select.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/find_end.h:
 
@@ -2215,6 +2522,10 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__ranges/data.h:
 
+/opt/homebrew/opt/llvm/include/c++/v1/__ranges/size.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_int16_t.h:
+
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/comp.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/clamp.h:
@@ -2233,12 +2544,6 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/partial_sort.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_fill_n.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__fwd/bit_reference.h:
-
-/Users/bryancamp/SoftwareDevelopment/cpp/professional/HftSimulator/include/itch_sender.h:
-
 /opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_specialization.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/xlocale/_wchar.h:
@@ -2249,21 +2554,19 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /Users/bryancamp/SoftwareDevelopment/cpp/professional/HftSimulator/include/itch_message.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__utility/no_destroy.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_strings.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/enable_if.h:
-
-/Users/bryancamp/SoftwareDevelopment/cpp/professional/HftSimulator/include/itch_connection.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__atomic/atomic_init.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_static_assert.h:
+/Users/bryancamp/SoftwareDevelopment/cpp/professional/HftSimulator/include/itch_file_generator.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/upper_bound.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/pthread/qos.h:
 
+/opt/homebrew/opt/llvm/include/c++/v1/__random/piecewise_linear_distribution.h:
+
 /Users/bryancamp/SoftwareDevelopment/cpp/professional/HftSimulator/include/hft_pinned_thread.h:
+
+/Library/Developer/CommandLineTools/usr/lib/clang/17/share/asan_ignorelist.txt:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__functional/reference_wrapper.h:
 
@@ -2277,17 +2580,13 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/copy_move_common.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_nothrow_destructible.h:
+/opt/homebrew/opt/llvm/include/c++/v1/istream:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_is_sorted.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/_mcontext.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/copy_cv.h:
+/opt/homebrew/opt/llvm/include/c++/v1/__random/uniform_random_bit_generator.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/atomic:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_copy_backward.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/add_pointer.h:
+/Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdarg.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_min_element.h:
 
@@ -2303,9 +2602,15 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_wchar_t.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__functional/binder2nd.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_uint16_t.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/malloc/_malloc.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types.h:
+
+/Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_offsetof.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/in_found_result.h:
+
+/Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_nullptr_t.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/partition.h:
 
@@ -2313,43 +2618,35 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_header_macro.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__thread/formatter.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/malloc/_ptrcheck.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__configuration/abi.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/transform.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_sa_family_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_mutex_t.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_mismatch.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__thread/this_thread.h:
+/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_find_first_of.h:
 
-/Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stdarg_header_macro.h:
-
-/Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stdarg___gnuc_va_list.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__tuple/find_index.h:
+/opt/homebrew/opt/llvm/include/c++/v1/__numeric/inclusive_scan.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_fsfilcnt_t.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/ratio:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_arithmetic.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__functional/operations.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/invoke.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/xlocale/_string.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__tuple/find_index.h:
+
+/Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stdarg___gnuc_va_list.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_size_t.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_partial_sort.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/numeric:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_empty.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_find_if_not.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_intmax_t.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_always_bitcastable.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/initializer_list:
 
@@ -2363,9 +2660,9 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/errno.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_useconds_t.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/constrained_ctypes.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/common_reference.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_useconds_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_posix_availability.h:
 
@@ -2393,15 +2690,19 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_short.h:
 
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_implicitly_default_constructible.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__iterator/ranges_iterator_traits.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_time_t.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/netinet6/in6.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/queue:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__utility/unreachable.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_int8_t.h:
-
-/Library/Developer/CommandLineTools/usr/lib/clang/17/share/asan_ignorelist.txt:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_timespec.h:
 
@@ -2411,19 +2712,17 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__tuple/tuple_like_no_subrange.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_ssize_t.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_upper_bound.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_partial_sort.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_size_t.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_va_list.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_destructible.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_sigset_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/stdio.h:
 
@@ -2437,111 +2736,19 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_locale_t.h:
 
+/opt/homebrew/opt/llvm/include/c++/v1/__numeric/iota.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_rsize_t.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_nlink_t.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/void_t.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_symbol_aliasing.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__concepts/relation.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__tuple/tuple_indices.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_rotate.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/add_cv.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__random/uniform_int_distribution.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__math/logarithms.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_timeval.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/vector:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/shuffle.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_replace_if.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_mach_port_t.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/istream:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/_mcontext.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__random/uniform_random_bit_generator.h:
-
-/Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdarg.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__std_mbstate_t.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_move_backward.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_null_pointer.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_key_t.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/libkern/_OSByteOrder.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/pthread/pthread_impl.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_off_t.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_integral.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__functional/bind_front.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/any_of.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_int64_t.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_abstract.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/shift_left.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__iterator/sortable.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_strings.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/unique.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/xlocale/_stdio.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/set_union.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_ino64_t.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_in_port_t.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_uint16_t.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types.h:
-
-/Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_offsetof.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_includes.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_id_t.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__assertion_handler:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/reverse.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__format/container_adaptor.h:
-
-/Library/Developer/CommandLineTools/usr/lib/clang/17/include/limits.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_int.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_fd_zero.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__configuration/availability.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_sort_heap.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_reverse_copy.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__functional/bind_front.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_int64_t.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/any_of.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types.h:
 
@@ -2549,11 +2756,83 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_fd_set.h:
 
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/void_t.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_symbol_aliasing.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__concepts/relation.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_rotate.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__random/uniform_int_distribution.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__math/logarithms.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_timeval.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__thread/jthread.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/resource.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_replace_if.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_move_backward.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_iovec_t.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__thread/support.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_intptr_t.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_allocator.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__iterator/segmented_iterator.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/libkern/_OSByteOrder.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/pthread/pthread_impl.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_off_t.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/shift_left.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__iterator/sortable.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_execution_policy.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__random/poisson_distribution.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/vector:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/shuffle.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/xlocale/_stdio.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_ino64_t.h:
+
+/Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_ptrdiff_t.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/socket.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_in_port_t.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_includes.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_id_t.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_int.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_fd_zero.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__configuration/availability.h:
+
 /opt/homebrew/opt/llvm/include/c++/v1/__fwd/string_view.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_find.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/xlocale/_ctype.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__stop_token/intrusive_shared_ptr.h:
+/opt/homebrew/opt/llvm/include/c++/v1/__chrono/file_clock.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_find.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/qos.h:
 
@@ -2565,11 +2844,25 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_mbstate_t.h:
 
+/opt/homebrew/opt/llvm/include/c++/v1/__chrono/year.h:
+
 /opt/homebrew/opt/llvm/include/c++/v1/functional:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_fd_copy.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_dev_t.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_remove.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/pop_heap.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_bounds.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctermid.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_blksize_t.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__exception/exception.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdlib.h:
 
@@ -2583,23 +2876,9 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/comp_ref_type.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/sort.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_fsblkcnt_t.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/in_found_result.h:
-
-/Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_nullptr_t.h:
-
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/set_intersection.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/minmax.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_attr_t.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/rank.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_int32_t.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_trivially_lexicographically_comparable.h:
 
@@ -2611,6 +2890,16 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_endian.h:
 
+/opt/homebrew/opt/llvm/include/c++/v1/__numeric/midpoint.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__assertion_handler:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/reverse.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__format/container_adaptor.h:
+
+/Library/Developer/CommandLineTools/usr/lib/clang/17/include/limits.h:
+
 /opt/homebrew/opt/llvm/include/c++/v1/deque:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__memory/swap_allocator.h:
@@ -2618,8 +2907,6 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 /opt/homebrew/opt/llvm/include/c++/v1/__fwd/tuple.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdio.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdint.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_binary_search.h:
 
@@ -2629,19 +2916,31 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__bit/endian.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_const.h:
-
 /opt/homebrew/opt/llvm/include/c++/v1/__functional/mem_fn.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__atomic/to_gcc_order.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_make_heap.h:
 
+/opt/homebrew/opt/llvm/include/c++/v1/__filesystem/path.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_time.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/_types.h:
 
+/opt/homebrew/opt/llvm/include/c++/v1/__numeric/saturation_arithmetic.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__numeric/partial_sum.h:
+
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_is_partitioned.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdint.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__random/chi_squared_distribution.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/copy_n.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/net/net_kev.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__fwd/memory.h:
 
@@ -2651,12 +2950,6 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_uint32_t.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__iterator/unreachable_sentinel.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__thread/id.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__thread/thread.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/types.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/_types.h:
@@ -2665,31 +2958,17 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/move_backward.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/malloc/_ptrcheck.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_push_heap.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/copy_n.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__xlocale.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_caddr_t.h:
-
 /opt/homebrew/opt/llvm/include/c++/v1/__iterator/next.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_fundamental.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__filesystem/file_time_type.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_printf.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/pthread.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctype.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctermid.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_blksize_t.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_bounds.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_aggregate.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__fwd/sstream.h:
 
@@ -2699,29 +2978,25 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/_mcontext.h:
 
-/Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_ptrdiff_t.h:
-
 /opt/homebrew/opt/llvm/include/c++/v1/__iterator/common_iterator.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/make_projected.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_clock_t.h:
+/opt/homebrew/opt/llvm/include/c++/v1/__ranges/view_interface.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_class.h:
+/opt/homebrew/opt/llvm/include/c++/v1/__mutex/tag_types.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/replace_copy.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/limits.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__memory/raw_storage_iterator.h:
+/opt/homebrew/opt/llvm/include/c++/v1/atomic:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_sort.h:
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/add_pointer.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__memory/auto_ptr.h:
+/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_copy_backward.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_uid_t.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__tuple/tuple_like_ext.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__math/hypot.h:
 
@@ -2731,27 +3006,49 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_uint8_t.h:
 
+/opt/homebrew/opt/llvm/include/c++/v1/exception:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_floating_point.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__stop_token/stop_state.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdlib.h:
+
 /Users/bryancamp/SoftwareDevelopment/cpp/professional/HftSimulator/include/spsc_ringbuffer.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__bit/bit_log2.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/negation.h:
+/opt/homebrew/opt/llvm/include/c++/v1/__iterator/empty.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_int32_t.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_socklen_t.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__math/error_functions.h:
+/opt/homebrew/opt/llvm/include/c++/v1/__functional/binder2nd.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternalLegacy.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/malloc/_malloc.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/bit:
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/add_volatile.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/errno.h:
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/add_const.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__chrono/concepts.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/partition_copy.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/gethostuuid.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/netinet/in.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_t.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/extent.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/endian.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_caddr_t.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_push_heap.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__xlocale.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/move.h:
 
@@ -2765,25 +3062,59 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/_endian.h:
 
+/opt/homebrew/opt/llvm/include/c++/v1/ctype.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/_param.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__filesystem/operations.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__utility/integer_sequence.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/_param.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/ctype.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/invoke.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__functional/operations.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_sort.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__chrono/hh_mm_ss.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/copy_cv.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_is_sorted.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__charconv/to_chars_result.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_wint_t.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/partition_copy.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h:
-
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_next_permutation.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_mb_cur_max.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__random/seed_seq.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/select.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__compare/three_way_comparable.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_wctype_t.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_xlocale.h:
+/opt/homebrew/opt/llvm/include/c++/v1/__exception/exception_ptr.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__memory/auto_ptr.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/iomanip:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_class.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_clock_t.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__memory/raw_storage_iterator.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__filesystem/directory_options.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_ct_rune_t.h:
 
@@ -2797,52 +3128,60 @@ CMakeFiles/HftSimulator.dir/src/main.cpp.o: /Users/bryancamp/SoftwareDevelopment
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/count.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_remove.h:
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/negation.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/pop_heap.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_int32_t.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_find_first_of.h:
+/opt/homebrew/opt/llvm/include/c++/v1/__tuple/tuple_size.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__iterator/incrementable_traits.h:
+/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/sort_heap.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/_limits.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_fd_setsize.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/cctype:
+/opt/homebrew/opt/llvm/include/c++/v1/__math/error_functions.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/malloc/_malloc_type.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternalLegacy.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/bit:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/errno.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arpa/inet.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_array.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__chrono/steady_clock.h:
 
 /opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_set_intersection.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/appleapiopts.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/xlocale/_ctype.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_wchar_t.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_string.h:
+/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/shift_right.h:
+
+/Users/bryancamp/SoftwareDevelopment/cpp/professional/HftSimulator/src/main.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/alloca.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_wchar_t.h:
+/opt/homebrew/opt/llvm/include/c++/v1/cctype:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__compare/compare_partial_order_fallback.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/malloc/_malloc_type.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_string.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/unistd.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__iterator/incrementable_traits.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/_limits.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__filesystem/path_iterator.h:
+
+/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_always_bitcastable.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_intmax_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_uintmax_t.h:
 
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_standard_layout.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__tuple/tuple_element.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__functional/is_transparent.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/lazy.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__algorithm/ranges_search.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/assert.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__type_traits/is_nothrow_assignable.h:
-
 /opt/homebrew/opt/llvm/include/c++/v1/__iterator/erase_if_container.h:
-
-/opt/homebrew/opt/llvm/include/c++/v1/__exception/exception_ptr.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h:
