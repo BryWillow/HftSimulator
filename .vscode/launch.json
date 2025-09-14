@@ -5,7 +5,7 @@
             "name": "Debug HftSimulator",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/HftSimulator",
+            "program": "${workspaceFolder}/bin/Debug/HftSimulator",
             "cwd": "${workspaceFolder}",
             "MIMode": "lldb"
         },

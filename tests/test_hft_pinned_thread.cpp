@@ -1,4 +1,4 @@
-#include "hft_pinned_thread.h"
+#include "pinned_thread.h"
 #include <gtest/gtest.h>
 #include <string>
 
