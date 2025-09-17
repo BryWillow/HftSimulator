@@ -2,21 +2,40 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Debug HftSimulator",
+            "name": "Debug listener_app",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/bin/Debug/HftSimulator",
+            "program": "${workspaceFolder}/bin/Debug/listener_app",
+            "args": [],
+            "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
-            "MIMode": "lldb"
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "preLaunchTask": "build-debug"
         },
         {
-            "name": "Debug HftSimulatorTests",
+            "name": "Debug replayer_app",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/HftSimulatorTests",
-            "args": ["--gtest_filter=*"],
+            "program": "${workspaceFolder}/bin/Debug/replayer_app",
+            "args": [],
+            "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
-            "MIMode": "lldb"
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "preLaunchTask": "build-debug"
+        },
+        {
+            "name": "Debug tests",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/Debug/tests",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "preLaunchTask": "build-debug"
         }
     ]
 }

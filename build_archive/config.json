@@ -1,0 +1,23 @@
+{
+  "shared": {
+    "_comment_fyi": "FYI: shared settings used by both listener and replayer",
+    "udp_port": 5555,
+    "num_messages_to_send": 10000
+  },
+  "listener": {
+    "_comment_fyi": "FYI: listener-specific settings",
+    "mkt_data_buffer_size": 2048,
+    "_comment_buffer_size": "COMPILE-TIME CONSTANT: size of the SPSC ring buffer. Changing this in JSON has NO effect at runtime; recompile to change.",
+    "cpu_core_listener": 0,
+    "cpu_core_strategy": 1,
+    "market_data_idle_timeout": "00:30:00"
+  },
+  "replayer": {
+    "_comment_fyi": "FYI: replayer-specific settings",
+    "file_path": "totalview_capture.itch",
+    "dest_ip": "127.0.0.1",
+    "replay_speed": 1.0,
+    "cpu_core": 0,
+    "stress_test": false
+  }
+}

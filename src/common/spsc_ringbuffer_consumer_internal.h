@@ -1,3 +1,11 @@
+// ---------------------------------------------------------------------------
+// File        : spsc_ringbuffer_consumer_internal.h
+// Project     : HftSimulator
+// Component   : Common
+// Description : Internal consumer for single-producer single-consumer ring buffer
+// Author      : Bryan Camp
+// ---------------------------------------------------------------------------
+
 #pragma once
 
 #include <atomic>
@@ -67,10 +75,10 @@ public:
     }
 
 private:
-    SpScRingBuffer<MsgType, N>& _buffer; ///< Hot-path buffer reference
-    Callback _callback;                  ///< Hot-path callback
-    std::atomic<bool> _stopFlag;         ///< Relaxed atomic stop flag
-    std::thread _thread;
+    SpScRingBuffer<MsgType, N>& _buffer;    ///< Hot-path buffer reference
+    Callback                    _callback;  ///< Hot-path callback
+    std::atomic<bool>           _stopFlag;  ///< Relaxed atomic stop flag
+    std::thread                 _thread;    ///< Consumer thread
 
     /**
      * @brief Core consuming loop

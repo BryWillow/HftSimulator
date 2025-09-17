@@ -1,17 +1,30 @@
+// ---------------------------------------------------------------------------
+// File        : itch_message_udp_replayer.h
+// Project     : HftSimulator
+// Component   : Common
+// Description : Replays ITCH message from a file over UDP
+// Author      : Bryan Camp
+// ---------------------------------------------------------------------------
+
 #pragma once
 
-#include <atomic>       // std::atomic for stop flag
-#include <memory>       // std::unique_ptr for owning the thread
-#include <string>       // std::string for filenames, IP addresses
-#include "itch_message.h"     // ItchMessage definition
-#include "pinned_thread.h"    // PinnedThread class for HFT-style pinned thread
-#include "cpu_pause.h"        // cpu_pause() for reducing CPU busy-wait pressure
+#include <atomic>
+#include <memory>
+#include <string>
+
+#include "itch_message.h"
+#include "pinned_thread.h"
+#include "cpu_pause.h"
+#include "constants.h"  // defines NO_PINNING
 
 /**
+ * @class ItchMessageUdpReplayer
  * @brief Plays back ITCH messages over UDP at configurable speed.
- * 
- * Designed for low-latency HFT testing. Uses a pinned thread to replay
- * messages and an atomic stop flag to safely terminate.
+ *
+ * Features:
+ * - Low-latency pinned thread replay
+ * - Atomic stop flag for safe shutdown
+ * - Configurable replay speed
  */
 class ItchMessageUdpReplayer {
 public:
@@ -21,13 +34,13 @@ public:
      * @param destIp Destination IP for UDP
      * @param destPort Destination UDP port
      * @param speedFactor Replay speed multiplier (1.0 = real-time)
-     * @param cpuCore Optional CPU core to pin the thread (-1 = no pin)
+     * @param cpuCore Optional CPU core to pin the thread (NO_PINNING = no pin)
      */
     ItchMessageUdpReplayer(const std::string& fileName,
                            const std::string& destIp,
                            uint16_t destPort,
-                           double speedFactor,
-                           int cpuCore = -1)
+                           double   speedFactor,
+                           int      cpuCore = hft::NO_CPU_PINNING)
         : _fileName(fileName)
         , _destIp(destIp)
         , _destPort(destPort)
@@ -36,7 +49,7 @@ public:
         , _stopFlag(false)
     {}
 
-    /// Disable copy and move
+    /// Deleted copy and move constructors to enforce unique ownership
     ItchMessageUdpReplayer(const ItchMessageUdpReplayer&) = delete;
     ItchMessageUdpReplayer(ItchMessageUdpReplayer&&) = delete;
     ItchMessageUdpReplayer& operator=(const ItchMessageUdpReplayer&) = delete;
@@ -59,6 +72,11 @@ public:
         if (_thread) _thread->join();
     }
 
+    /// @brief Returns true if all messages have been replayed
+    bool finished() const {
+        return _current_index >= total_messages_;
+    }
+
 private:
     /// @brief Actual replay loop executed on the pinned thread
     void replayLoop(std::atomic<bool>& stop) {
@@ -70,11 +88,13 @@ private:
     }
 
 private:
-    std::string _fileName;
-    std::string _destIp;
-    uint16_t _destPort;
-    double _speedFactor;
-    int _cpuCore;
-    std::atomic<bool> _stopFlag;
+    std::string             _fileName;
+    std::string             _destIp;
+    uint16_t                _destPort;
+    double                  _speedFactor;
+    int                     _cpuCore;
+    std::atomic<bool>       _stopFlag;
     std::unique_ptr<PinnedThread> _thread;
+    std::atomic<size_t>     _current_index{0};
+    size_t                  total_messages_{0};
 };

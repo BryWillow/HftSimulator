@@ -1,3 +1,10 @@
+# ---------------------------------------------------------------------------
+# File        : .gitignore
+# Project     : HftSimulator
+# Description : Ignore build artifacts, binaries, IDE/editor files, and OS junk
+# Author      : Bryan Camp
+# ---------------------------------------------------------------------------
+
 # =========================
 # Build artifacts
 # =========================

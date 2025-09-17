@@ -1,80 +1,95 @@
 #!/bin/bash
-# build.sh
-# Usage: ./build.sh [Debug|Release|All]
+# ---------------------------------------------------------------------------
+# File        : build.sh
+# Project     : HftSimulator
+# App         : Build Script
+# Description : Builds Debug and Release executables using CMake. Debug builds
+#               enable sanitizers, compile and run tests. Release builds are
+#               optimized. Builds both sequentially if requested.
+# Author      : Bryan Camp
+# ---------------------------------------------------------------------------
+# Usage       : ./build.sh [Debug|Release|All]
+# Notes       :
+#   - Binaries are placed under bin/Debug and bin/Release.
+#   - Intermediate build/ directories are deleted after each build.
+#   - Existing bin files are archived to build_archive/ before cleaning.
+# ---------------------------------------------------------------------------
 
 set -euo pipefail
 
-# Usage function
+# Usage help
 usage() {
     echo "Usage: $0 [Debug|Release|All]"
-    echo "  Debug   : build Debug pipeline with sanitizers and run tests"
-    echo "  Release : build Release pipeline (optimized)"
-    echo "  All     : build both Debug and Release sequentially"
     exit 1
 }
 
-# Check for argument
+# Check arguments
 if [[ $# -lt 1 ]]; then
     usage
 fi
 
 TARGET=$1
-
-# Validate argument
 if [[ "$TARGET" != "Debug" && "$TARGET" != "Release" && "$TARGET" != "All" ]]; then
-    echo "Error: Invalid build target '$TARGET'."
+    echo "Error: Invalid build target '$TARGET'"
     usage
 fi
 
-CXX=clang++
-CXXFLAGS="-std=c++20 -Wall -Wextra -pthread -O3 -march=native -I./src/common"
-
-build_config() {
-    local BUILD_TYPE=$1
-    local BUILD_DIR="build/$BUILD_TYPE"
-    local BIN_DIR="bin/$BUILD_TYPE"
-
-    echo "[Build] Cleaning $BUILD_DIR and $BIN_DIR..."
-    rm -rf "$BUILD_DIR" "$BIN_DIR"
-    mkdir -p "$BUILD_DIR" "$BIN_DIR"
-
-    # Enable sanitizers for Debug
-    local EXTRA_FLAGS=""
-    if [[ "$BUILD_TYPE" == "Debug" ]]; then
-        EXTRA_FLAGS="-fsanitize=address,undefined -fno-omit-frame-pointer"
-        echo "[Build] Debug mode: enabling sanitizers"
-    fi
-
-    # Compile a target executable
-    compile_target() {
-        local name=$1
-        local src_files
-        src_files=$(find "src/$name" -name "*.cpp")
-        local output="$BIN_DIR/$name"
-        echo "[Build] Compiling $name -> $output"
-        $CXX $CXXFLAGS $EXTRA_FLAGS $src_files -o "$output"
-    }
-
-    compile_target "listener_app"
-    compile_target "replayer_app"
-
-    echo "[Build] Done. Executables are in $BIN_DIR"
-
-    # Build and run tests if Debug
-    if [[ "$BUILD_TYPE" == "Debug" ]]; then
-        if [[ -d "src/tests" ]]; then
-            echo "[Build] Compiling and running tests..."
-            TEST_OUTPUT="$BIN_DIR/tests"
-            TEST_SRC=$(find "src/tests" -name "*.cpp")
-            $CXX $CXXFLAGS $EXTRA_FLAGS $TEST_SRC -o "$TEST_OUTPUT"
-            echo "[Build] Running tests..."
-            "$TEST_OUTPUT"
-        else
-            echo "[Build] No tests directory found."
-        fi
+# Archive existing binaries and JSON files if present
+archive_existing_bins() {
+    local ARCHIVE_DIR="build_archive"
+    if [[ -d bin ]]; then
+        mkdir -p "$ARCHIVE_DIR"
+        echo "[Build] Archiving existing binaries and config files to $ARCHIVE_DIR..."
+        cp -r bin/Debug "$ARCHIVE_DIR/" 2>/dev/null || true
+        cp -r bin/Release "$ARCHIVE_DIR/" 2>/dev/null || true
+        cp -f *.json "$ARCHIVE_DIR/" 2>/dev/null || true
     fi
 }
 
+# Clean build and bin directories
+cleanup() {
+    echo "[Build] Cleaning up build/ and bin/ directories..."
+    rm -rf build
+    rm -rf bin
+}
+
+# Function to build one configuration
+build_config() {
+    local BUILD_TYPE=$1
+    local BUILD_DIR="build/$BUILD_TYPE"
+
+    echo "[Build] Starting $BUILD_TYPE build..."
+
+    # Configure with CMake
+    cmake -S . -B "$BUILD_DIR" -DCMAKE_BUILD_TYPE="$BUILD_TYPE"
+
+    # Build
+    cmake --build "$BUILD_DIR" --config "$BUILD_TYPE" -j
+
+    # Run tests only in Debug
+    if [[ "$BUILD_TYPE" == "Debug" ]]; then
+        echo "[Build] Running tests..."
+        (cd "$BUILD_DIR" && ctest --output-on-failure)
+    fi
+
+    # Copy binaries to bin directory
+    mkdir -p "bin/$BUILD_TYPE"
+    cp -r "$BUILD_DIR"/* "bin/$BUILD_TYPE/" 2>/dev/null || true
+
+    # Clean up intermediate build directory
+    echo "[Build] Cleaning intermediate directory $BUILD_DIR"
+    rm -rf "$BUILD_DIR"
+
+    echo "[Build] $BUILD_TYPE build complete."
+}
+
+# Archive existing files first
+archive_existing_bins
+
+# Clean directories
+cleanup
+
+# Build based on target
 case "$TARGET" in
     Debug)
         build_config "Debug"

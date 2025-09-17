@@ -1,18 +1,15 @@
+// ---------------------------------------------------------------------------
+// File        : hton_utils.h
+// Project     : HftSimulator
+// Component   : Common
+// Description : Cross-platform helpers for 64-bit host/network byte order conversion
+// Author      : Bryan Camp
+// ---------------------------------------------------------------------------
+
 #pragma once
 
 #include <cstdint>
 #include <arpa/inet.h>
-
-/**
- * @file hton_utils.h
- * @brief Cross-platform helpers for 64-bit host/network byte order conversion.
- *
- * This file isolates htonll/ntohll to simplify endian conversions
- * and improve readability. Keeps the main code free from platform
- * macros and messy inline functions.
- *
- * Linux/macOS safe and high performance. No dynamic memory used.
- */
 
 /**
  * @brief Swap bytes of a 64-bit integer.
@@ -30,10 +27,37 @@ inline uint64_t bswap64(uint64_t x) {
            ((x & 0x00000000000000FFULL) << 56);
 }
 
+#if defined(__APPLE__)
+#include <libkern/OSByteOrder.h>
+#undef htonll
+#undef ntohll
+
 /**
- * @brief Convert 64-bit host byte order to network byte order.
- * @param x host-order 64-bit integer
- * @return network-order 64-bit integer
+ * @brief Convert 64-bit host byte order to network byte order (macOS)
+ */
+inline uint64_t htonll(uint64_t x) {
+#if __BYTE_ORDER__ == __ORDER_LITTLE_ENDIAN__
+    return OSSwapHostToBigInt64(x);
+#else
+    return x;
+#endif
+}
+
+/**
+ * @brief Convert 64-bit network byte order to host byte order (macOS)
+ */
+inline uint64_t ntohll(uint64_t x) {
+#if __BYTE_ORDER__ == __ORDER_LITTLE_ENDIAN__
+    return OSSwapBigToHostInt64(x);
+#else
+    return x;
+#endif
+}
+
+#else // Linux / other platforms
+
+/**
+ * @brief Convert 64-bit host byte order to network byte order
  */
 inline uint64_t htonll(uint64_t x) {
 #if __BYTE_ORDER == __LITTLE_ENDIAN
@@ -44,9 +68,7 @@ inline uint64_t htonll(uint64_t x) {
 }
 
 /**
- * @brief Convert 64-bit network byte order to host byte order.
- * @param x network-order 64-bit integer
- * @return host-order 64-bit integer
+ * @brief Convert 64-bit network byte order to host byte order
  */
 inline uint64_t ntohll(uint64_t x) {
 #if __BYTE_ORDER == __LITTLE_ENDIAN
@@ -55,3 +77,5 @@ inline uint64_t ntohll(uint64_t x) {
     return x;
 #endif
 }
+
+#endif

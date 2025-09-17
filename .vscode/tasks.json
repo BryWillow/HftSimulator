@@ -1,25 +1,49 @@
 {
-  "version": "2.0.0",
-  "tasks": [
-    {
-      "label": "Build Debug",
-      "type": "shell",
-      "command": "./build.sh Debug",
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      }
-    },
-    {
-      "label": "Build Release",
-      "type": "shell",
-      "command": "./build.sh Release"
-    },
-    {
-      "label": "Run Unit Tests",
-      "type": "shell",
-      "command": "./build.sh test",
-      "group": "test"
-    }
-  ]
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build-debug",
+            "type": "shell",
+            "command": "${workspaceFolder}/build.sh",
+            "args": ["Debug"],
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Build Debug executables and run tests"
+        },
+        {
+            "label": "build-release",
+            "type": "shell",
+            "command": "${workspaceFolder}/build.sh",
+            "args": ["Release"],
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Build Release executables"
+        },
+        {
+            "label": "build-all",
+            "type": "shell",
+            "command": "${workspaceFolder}/build.sh",
+            "args": ["All"],
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Build both Debug and Release"
+        },
+        {
+          "label": "run-tests",
+          "type": "shell",
+          "command": "${workspaceFolder}/bin/Debug/tests",
+          "args": [],
+          "group": "test",
+          "problemMatcher": [
+              "$gcc"
+          ],
+          "detail": "Run compiled unit tests"
+        }
+    ]
 }

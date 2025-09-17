@@ -1,0 +1,28 @@
+#!/bin/bash
+# ---------------------------------------------------------------------------
+# File        : git_commit_summary
+# Project     : HftSimulator
+# Description : Summarize staged git changes across all files.
+# Author      : Bryan Camp
+# ---------------------------------------------------------------------------
+
+set -euo pipefail
+
+summarize_file() {
+    local file="$1"
+    local added removed
+    added=$(git diff --cached "$file" | grep -cE '^\+[^+]' || true)
+    removed=$(git diff --cached "$file" | grep -cE '^-([^-]|$)' || true)
+    printf " - %-40s (+%d / -%d)\n" "$file" "$added" "$removed"
+}
+
+if git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+    echo "📌 Staged changes summary:"
+    echo ""
+    git diff --cached --name-only | while read -r file; do
+        summarize_file "$file"
+    done
+else
+    echo "Error: not inside a git repository"
+    exit 1
+fi
