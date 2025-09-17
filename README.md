@@ -1,64 +1,129 @@
 # High Frequency Trading (HFT) Simulator
+*Author: Bryan Camp*
 
 ## Overview
 
-The HFTSimulator is an example of how one might design a lock-free HFT algoritm. 
-- Consumes/Decodes historic ITCH market data.
-- Market data is passed to the strategy via an SPSC queue
-- The strategy makes execution decisions.
-- Execution decisions are passed along via an SPSC queue.
-- Execution requests are sent via OUCH protocol to an exchange.
-- Matching Engine / Order Respones / Fills in next release.
+The **HftSimulator** is a high-performance, lock-free HFT pipeline designed to demonstrate professional-grade market data consumption, strategy execution, and low-latency design patterns.
 
-## Build Requirements
-- C++ 20 compatible compiler (developed using clang 1700.0.13.5).
-- CMake 3.16 or greater (https://cmake.org/download/) (developed using 4.1.1).
-- Note: GTest is included locally due to Fetch/CMake quirks on MacOS.
-- Run **build.sh** {Debug|Release|Clean} in the project directory.
-  * Note that a Debug build also *sanitizes* and *runs unit tests*.
-  * Binaries are located in bin/Debug and bin/Release
-## Market Data Consumption
-- The entire flow is intended to emulate **NSDQ**.
-- Market data is formatted using the **TotalView-ITCH 5.0** protocol.
-- It is encoded using **SBE** (Simple Binary Encoding).
-- It is transmitted via the **UDP** protocol.
-- Implementation is in the <u>ItchConnection</u> and <u>ItchProcessor</u> classes.
-
-## Market Data Decoding
-- See the <u>ItchProcessor</u> class.
-- Producer for the Market Data SPSC queue.
-
-## 🚀 Lock-Free SPSC Queue
-- Lock-free SPSC queue
-- Cache-line padding to avoid false sharing
-- Hard-coded power-of-two capacity for fast modulo (`& mask`)
-- Unit tests with **GoogleTest**
-- Optional runtime **sanitizers** (Address, UB, Thread, Memory)
+Key highlights:
+- Realistic **NASDAQ TotalView-ITCH 5.0** market data replay.
+- **Lock-free SPSC queues** with cache-line padding for zero-contention communication.
+- Pluggable **header-only strategies** for flexible algo development.
+- Full control over thread pinning and CPU core assignment.
+- Minimal heap allocations to maintain microsecond-level latency.
 
 ---
 
-## Strategy
-- Consumer of the Market Data SPSC queue.
-- Makes Execution Decisions
-- Producer for the Execution SPSC queue.
+## Build Requirements
 
-## Execution Encoding
-- Transforms strategy execution requests into OUCH format. 
+- **Supported Platforms:** Linux and MacOS (fully tested on MacOS)
+- **C++20** compatible compiler  
+  - Tested with **Clang 17.0.0.13.5** on MacOS
+- **CMake 3.16+**  
+  - Tested with **CMake 4.1.1**
+- GoogleTest included locally for unit tests.
 
-## Execution
-- Sends orders to an exchange.
+**Build Script:** `build.sh`  
 
+    ./build.sh [Debug|Release|All]
 
-## Building and Running Tests
+- **Debug:** runs unit tests and enables sanitizers (Address, Thread, Memory, UB)
+- **Release:** fully optimized, latency-focused
+- Binaries are placed in `bin/Debug` and `bin/Release`
 
-## Building and Running Tests
+---
 
-### 1. Configure & Build
-From the project root:
+## Components
 
-```bash
-- mkdir -p build
-- cd build
-- cmake -DCMAKE_BUILD_TYPE=Release ..
-- cmake --build . -j
-```
+### Replayer App (`replayer_app`)
+- Reads historic ITCH messages from files.
+- Replays market data over UDP.
+- Supports configurable speed and stress testing.
+
+### Listener App (`listener_app`)
+- Receives UDP market data from replayer or exchange.
+- Decodes ITCH messages into structured types.
+- Pushes decoded messages into **lock-free SPSC queues**.
+- Utilizes **pinned threads** for consistent microsecond-level processing.
+
+### Strategies (`src/strategies/`)
+- Header-only implementations (e.g., `micro_mean_reversion_strategy.h`).
+- Consume market data from SPSC queues.
+- Produce execution decisions to execution queue.
+- Fully pluggable for rapid experimentation and deployment.
+
+### Common (`src/common/`)
+- Header-only utilities shared across executables.
+- Includes:
+  - Lock-free **SPSC ring buffers**  
+  - **Pinned threads** for low-latency cores  
+  - ITCH decoding helpers  
+  - CPU pause loops and cache-aware structures
+
+---
+
+## Market Data
+
+- Simulates **NASDAQ TotalView-ITCH 5.0**.
+- Encoded using **SBE** (Simple Binary Encoding).
+- Transmitted via **UDP**.
+- Classes: `ItchConnection` and `ItchProcessor` handle reception and decoding.
+
+---
+
+## Lock-Free SPSC Queues
+
+- **Single-producer, single-consumer** design.
+- Cache-line aligned to prevent false sharing.
+- Fixed-size power-of-two capacity allows fast modulo operations using bitmask.
+- Optional runtime **sanitizers** (Address, Thread, Memory, UB).
+- Fully unit-tested with **GoogleTest**.
+
+---
+
+## Adding New Strategies
+
+1. Create a header in `src/strategies/`.
+2. Include it in your pipeline consumer (listener or main.cpp).
+3. Build and test using `build.sh`.
+4. Your strategy is immediately pluggable without changing other code.
+
+Example: Plugging in `micro_mean_reversion_strategy.h`
+
+    #include "strategies/micro_mean_reversion_strategy.h"
+
+    // inside listener or main.cpp
+    MicroMeanReversionStrategy strategy;
+    strategy.consume(marketDataRingBuffer);
+
+- No heap allocations required.
+- Fully compatible with existing SPSC queues.
+- Strategy can make execution decisions asynchronously.
+
+---
+
+## Notes
+
+- Pinned threads reduce OS scheduling jitter.
+- Ring buffers and structures are **cache-aligned** for microsecond performance.
+- Fully designed for **rapid strategy experimentation**.
+- Written entirely by **Bryan Camp**.
+
+---
+
+## Pipeline Structure
+
+See below for a simplified view of how data flows through the HftSimulator pipeline:
+
+    +----------------+     UDP     +----------------+     Ring Buffer     +----------------------+
+    | Replayer App   | ----------> | Listener App   | ----------------->  | Header-Only Strategy |
+    | (replay ITCH)  |             | (decode ITCH) |                     | (Micro Mean-Reversion|
+    +----------------+             +----------------+                     |  or your custom algo)|
+                                                                         +----------+-----------+
+                                                                                    |
+                                                                                    v
+                                                                        +------------------+
+                                                                        | Execution Queue  |
+                                                                        | (for OUCH orders |
+                                                                        |  in future)      |
+                                                                        +------------------+

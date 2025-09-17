@@ -10,6 +10,7 @@
 # =========================
 build/
 bin/
+build_archive/
 *.o
 *.obj
 *.so
