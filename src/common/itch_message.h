@@ -2,7 +2,7 @@
 // File        : itch_message.h
 // Project     : HftSimulator
 // Component   : Common
-// Description : TotalView ITCH message structure
+// Description : TotalView ITCH message structure with serialization
 // Author      : Bryan Camp
 // ---------------------------------------------------------------------------
 
@@ -10,7 +10,8 @@
 
 #include <cstdint>
 #include <string>
-#include <cstring>      // for strnlen
+#include <cstring>      // strnlen
+#include <fstream>      // for ifstream/ofstream
 #include <arpa/inet.h>  // ntohl, htonl
 
 #if defined(__x86_64__)
@@ -33,7 +34,7 @@ enum class Side : uint8_t {
  */
 enum class ItchMsgType : uint8_t {
     AddOrder      = 'A',
-    AddOrderMP    = 'F', ///< MPID (optional ID of who submitted the order)
+    AddOrderMP    = 'F',
     OrderExecuted = 'E',
     OrderCancel   = 'X',
     Trade         = 'P',
@@ -48,6 +49,7 @@ enum class ItchMsgType : uint8_t {
  * - No dynamic memory allocation
  * - Aligned to avoid false sharing between threads
  * - Supports network-to-host and host-to-network conversions
+ * - Can serialize/deserialize to/from binary streams
  */
 struct alignas(64) ItchMessage {
     ItchMsgType type           { ItchMsgType::Unknown }; ///< Order message type
@@ -92,5 +94,29 @@ struct alignas(64) ItchMessage {
         sequenceNumber = htonll(sequenceNumber);
         tsNanoSeconds  = htonll(tsNanoSeconds);
         // price and char arrays do not require conversion
+    }
+
+    // -----------------------------------------------------------------------
+    // Serialization / Deserialization
+    // -----------------------------------------------------------------------
+
+    /**
+     * @brief Serialize message to binary output stream
+     * @param ofs Output file stream
+     */
+    void serialize(std::ofstream& ofs) const {
+        ofs.write(reinterpret_cast<const char*>(this), sizeof(ItchMessage));
+    }
+
+    /**
+     * @brief Deserialize message from binary input stream
+     * @param ifs Input file stream
+     * @return true if read succeeded, false if EOF or partial read
+     */
+    bool deserialize(std::ifstream& ifs) {
+        if (!ifs.read(reinterpret_cast<char*>(this), sizeof(ItchMessage))) {
+            return false; // failed to read full message
+        }
+        return true;
     }
 };

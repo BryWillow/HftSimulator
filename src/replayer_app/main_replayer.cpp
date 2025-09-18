@@ -8,19 +8,35 @@
 
 #include <atomic>
 #include <chrono>
+#include <csignal>
+#include <filesystem>
 #include <fstream>
 #include <iostream>
 #include <string>
 #include <thread>
 
-#include "json.hpp"                      // JSON parsing using nlohmann::json library
+#include "json.hpp"                      // JSON parsing using nlohmann::json
 #include "itch_message_udp_replayer.h"   // ITCH UDP replayer
-#include "constants.h"                   // Global compile-time constants (e.g., BUFFER_SIZE)
+#include "constants.h"                   // Global compile-time constants
 
-// Use nlohmann::json for easy, header-only, C++17/20-friendly JSON parsing
 using json = nlohmann::json;
 
-/* Replayer configuration struct */
+/// Global stop flag for SIGINT handling
+std::atomic<bool> g_stopFlag{false};
+
+/**
+ * @brief Signal handler to safely stop the replayer
+ */
+void signalHandler(int signal) {
+    if (signal == SIGINT) {
+        g_stopFlag.store(true, std::memory_order_relaxed);
+        std::cerr << "\n[Replayer] SIGINT received, stopping replay...\n";
+    }
+}
+
+/**
+ * @brief Replayer configuration struct
+ */
 struct ReplayerConfig {
     std::string filePath;
     std::string destIp;
@@ -49,23 +65,59 @@ ReplayerConfig loadReplayerConfig(const std::string& path) {
     const auto& replayerJson = configJson["replayer"];
 
     ReplayerConfig cfg{};
-    cfg.filePath    = replayerJson.value("file_path", "totalview_capture.itch");
+    cfg.filePath    = replayerJson.value("file_path", "default.itch");
     cfg.destIp      = replayerJson.value("dest_ip", "127.0.0.1");
-    cfg.destPort    = sharedJson.value("udp_port", 5555);                // shared with listener
+    cfg.destPort    = sharedJson.value("udp_port", 5555);
     cfg.replaySpeed = replayerJson.value("replay_speed", 1.0);
     cfg.cpuCore     = replayerJson.value("cpu_core", 0);
     cfg.stressTest  = replayerJson.value("stress_test", false);
-    cfg.numMessages = sharedJson.value("num_messages_to_send", 10000);   // default messages
+    cfg.numMessages = sharedJson.value("num_messages_to_send", 10000);
 
     return cfg;
 }
 
-int main() {
+// ---------------------------------------------------------------------------
+// Main
+// ---------------------------------------------------------------------------
+int main(int argc, char* argv[]) {
     try {
-        // --- Load configuration ---
-        ReplayerConfig cfg = loadReplayerConfig("config.json");
+        // --- Register SIGINT handler ---
+        std::signal(SIGINT, signalHandler);
 
-        // --- Create and start the replayer ---
+        // --- Determine top-level project root directory ---
+        std::filesystem::path projectRoot = std::filesystem::path(__FILE__).parent_path() // src/replayer_app
+                                            .parent_path() // src
+                                            .parent_path(); // project root
+
+        // --- Resolve config.json in project root ---
+        std::filesystem::path configPath = projectRoot / "config.json";
+        if (!std::filesystem::exists(configPath)) {
+            std::cerr << "[Replayer] Error: config.json not found at: " << configPath << "\n";
+            return 1;
+        }
+
+        // --- Load configuration from JSON ---
+        ReplayerConfig cfg = loadReplayerConfig(configPath.string());
+
+        // --- Determine top-level project/data directory ---
+        std::filesystem::path dataDir = projectRoot / "data";
+
+        // --- Determine input file ---
+        std::string inputFile = "default.itch"; // default file
+        if (argc > 1) {
+            inputFile = argv[1];
+        }
+
+        std::filesystem::path filePath = dataDir / inputFile;
+        if (!std::filesystem::exists(filePath)) {
+            std::cerr << "[Replayer] Error: File does not exist: " << filePath << "\n";
+            return 1;
+        }
+
+        // Override filePath in config
+        cfg.filePath = filePath.string();
+
+        // --- Create replayer ---
         ItchMessageUdpReplayer replayer(
             cfg.filePath,
             cfg.destIp,
@@ -74,10 +126,16 @@ int main() {
             cfg.cpuCore
         );
 
+        // --- Load and validate all messages before starting replay ---
+        std::cout << "[Replayer] Loading messages from " << cfg.filePath << " ...\n";
+        replayer.loadAllMessages();
+        std::cout << "[Replayer] Loaded " << cfg.numMessages << " messages.\n";
+
+        // --- Start replay ---
         replayer.start();
 
-        // --- Wait until all messages are sent ---
-        while (!replayer.finished()) {
+        // --- Wait until all messages are sent or SIGINT received ---
+        while (!replayer.finished() && !g_stopFlag.load(std::memory_order_relaxed)) {
             std::this_thread::sleep_for(std::chrono::milliseconds(100));
         }
 

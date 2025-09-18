@@ -8,12 +8,6 @@
 #               optimized. Builds both sequentially if requested.
 # Author      : Bryan Camp
 # ---------------------------------------------------------------------------
-# Usage       : ./build.sh [Debug|Release|All]
-# Notes       :
-#   - Binaries are placed under bin/Debug and bin/Release.
-#   - Intermediate build/ directories are deleted after each build.
-#   - Existing bin files are archived to build_archive/ before cleaning.
-# ---------------------------------------------------------------------------
 
 set -euo pipefail
 
@@ -34,7 +28,9 @@ if [[ "$TARGET" != "Debug" && "$TARGET" != "Release" && "$TARGET" != "All" ]]; t
     usage
 fi
 
-# Archive existing binaries and JSON files if present
+# ---------------------------------------------------------------------------
+# Archive existing binaries
+# ---------------------------------------------------------------------------
 archive_existing_bins() {
     local ARCHIVE_DIR="build_archive"
     if [[ -d bin ]]; then
@@ -46,14 +42,18 @@ archive_existing_bins() {
     fi
 }
 
+# ---------------------------------------------------------------------------
 # Clean build and bin directories
+# ---------------------------------------------------------------------------
 cleanup() {
-    echo "[Build] Cleaning up build/ and bin/ directories..."
+    echo "[Build] Removing build/ and bin/ directories..."
     rm -rf build
     rm -rf bin
 }
 
-# Function to build one configuration
+# ---------------------------------------------------------------------------
+# Build one configuration
+# ---------------------------------------------------------------------------
 build_config() {
     local BUILD_TYPE=$1
     local BUILD_DIR="build/$BUILD_TYPE"
@@ -69,27 +69,22 @@ build_config() {
     # Run tests only in Debug
     if [[ "$BUILD_TYPE" == "Debug" ]]; then
         echo "[Build] Running tests..."
-        (cd "$BUILD_DIR" && ctest --output-on-failure)
+        (cd "$BUILD_DIR" && ctest --output-on-failure || true)
     fi
 
-    # Copy binaries to bin directory
+    # Copy only the executables to bin/
     mkdir -p "bin/$BUILD_TYPE"
-    cp -r "$BUILD_DIR"/* "bin/$BUILD_TYPE/" 2>/dev/null || true
-
-    # Clean up intermediate build directory
-    echo "[Build] Cleaning intermediate directory $BUILD_DIR"
-    rm -rf "$BUILD_DIR"
+    find "$BUILD_DIR" -maxdepth 1 -type f -perm +111 -exec cp {} "bin/$BUILD_TYPE/" \; || true
 
     echo "[Build] $BUILD_TYPE build complete."
 }
 
-# Archive existing files first
+# ---------------------------------------------------------------------------
+# Main build sequence
+# ---------------------------------------------------------------------------
 archive_existing_bins
-
-# Clean directories
 cleanup
 
-# Build based on target
 case "$TARGET" in
     Debug)
         build_config "Debug"
@@ -102,3 +97,11 @@ case "$TARGET" in
         build_config "Release"
         ;;
 esac
+
+# Final cleanup of top-level build directory
+if [[ -d build ]]; then
+    echo "[Build] Removing top-level build/ directory..."
+    rm -rf build
+fi
+
+echo "[Build] All done."

@@ -11,6 +11,9 @@
 #include <atomic>
 #include <memory>
 #include <string>
+#include <vector>
+#include <fstream>
+#include <stdexcept>
 
 #include "itch_message.h"
 #include "pinned_thread.h"
@@ -25,6 +28,7 @@
  * - Low-latency pinned thread replay
  * - Atomic stop flag for safe shutdown
  * - Configurable replay speed
+ * - Memory-resident message loading and validation
  */
 class ItchMessageUdpReplayer {
 public:
@@ -74,16 +78,46 @@ public:
 
     /// @brief Returns true if all messages have been replayed
     bool finished() const {
-        return _current_index >= total_messages_;
+        return _current_index >= _total_messages;
+    }
+
+    /**
+     * @brief Load all messages from file into memory and validate
+     * @throws std::runtime_error if file cannot be opened or message invalid
+     */
+    void loadAllMessages() {
+        std::ifstream ifs(_fileName, std::ios::binary);
+        if (!ifs.is_open()) {
+            throw std::runtime_error("Failed to open ITCH file: " + _fileName);
+        }
+
+        _messages.clear();
+        ItchMessage msg;
+        size_t index = 0;
+        while (msg.deserialize(ifs)) {
+            // Basic validation
+            if (msg.symbol[0] == '\0' || msg.size == 0 || msg.price <= 0.0) {
+                throw std::runtime_error("Invalid message at index " + std::to_string(index));
+            }
+            _messages.push_back(msg);
+            ++index;
+        }
+
+        if (_messages.empty()) {
+            throw std::runtime_error("No messages loaded from file: " + _fileName);
+        }
+
+        _total_messages = _messages.size();
     }
 
 private:
     /// @brief Actual replay loop executed on the pinned thread
     void replayLoop(std::atomic<bool>& stop) {
-        while (!stop.load(std::memory_order_relaxed)) {
-            ItchMessage msg{}; // populate message from file/memory
-            // send message via UDP
-            _mm_pause();       // reduce CPU pressure while spinning
+        while (!stop.load(std::memory_order_relaxed) && _current_index < _total_messages) {
+            const ItchMessage& msg = _messages[_current_index];
+            // send message via UDP (implementation omitted)
+            ++_current_index;
+            _mm_pause(); // reduce CPU pressure while spinning
         }
     }
 
@@ -95,6 +129,8 @@ private:
     int                     _cpuCore;
     std::atomic<bool>       _stopFlag;
     std::unique_ptr<PinnedThread> _thread;
-    std::atomic<size_t>     _current_index{0};
-    size_t                  total_messages_{0};
+
+    std::vector<ItchMessage> _messages;      ///< Memory-resident messages
+    std::atomic<size_t>      _current_index{0};
+    size_t                   _total_messages{0};
 };
